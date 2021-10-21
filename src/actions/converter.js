@@ -1,5 +1,6 @@
 export const SET_AMOUNT = 'SET_AMOUNT';
-export const CHANGE_CURRENCY = 'CHANGE_CURRENCY';
+export const CHANGE_CONVERTED_CURRENCY = 'CHANGE_CONVERTED_CURRENCY';
+export const CHANGE_BASE_CURRENCY = 'CHANGE_BASE_CURRENCY';
 export const CONVERT_AMOUNT = 'CONVERT_AMOUNT';
 export const CHANGE_CONVERTED_AMOUNT   ='CHANGE_CONVERTED_AMOUNT';
 
@@ -8,8 +9,13 @@ export const setAmount = (value) => ({
   value: value,
 });
 
-export const changeCurrency = (newCurrency) => ({
-  type: CHANGE_CURRENCY,
+export const changeConvertedCurrency = (newCurrency) => ({
+  type: CHANGE_CONVERTED_CURRENCY,
+  value: newCurrency,
+});
+
+export const changeBaseCurrency = (newCurrency) => ({
+  type: CHANGE_BASE_CURRENCY,
   value: newCurrency,
 });
 
