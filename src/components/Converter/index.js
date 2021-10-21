@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import './converter.scss';
 
 import currenciesList from 'src/data/currencies';
@@ -14,7 +15,7 @@ changeConvertedCurrency,
 convertedCurrency,
 }) => (
   <>
-    <Dropdown>
+    <Dropdown drop="end">
       <Dropdown.Toggle variant="success" id="dropdown-basic">
         Select the currency to convert
       </Dropdown.Toggle>
@@ -38,7 +39,7 @@ convertedCurrency,
         setAmount(evt.currentTarget.value);
       }}
     /> {baseCurrency}
-    <Dropdown>
+    <Dropdown drop="end">
       <Dropdown.Toggle variant="success" id="dropdown-basic">
         Select the currency for conversion
       </Dropdown.Toggle>

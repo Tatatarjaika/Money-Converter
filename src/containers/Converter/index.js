@@ -19,16 +19,17 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   setAmount: (newAmount) => {
     dispatch(setAmount(newAmount));
+    dispatch(convertAmount());
   },
 
   changeConvertedCurrency: (newCurrency) => {
     dispatch(changeConvertedCurrency(newCurrency));
-    dispatch(convertAmount(newCurrency));
+    dispatch(convertAmount());
   },
 
   changeBaseCurrency: (newCurrency) => {
     dispatch(changeBaseCurrency(newCurrency));
-    dispatch(convertAmount(newCurrency));
+    dispatch(convertAmount());
   },
 });
 
