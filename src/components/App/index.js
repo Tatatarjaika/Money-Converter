@@ -1,6 +1,6 @@
 // == Import npm
 import React from 'react';
-import Converter from 'src/components/Converter';
+import Converter from 'src/containers/Converter';
 
 // == Import
 import './styles.scss';
