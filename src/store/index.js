@@ -4,10 +4,10 @@ import converterMiddleware from 'src/middlewares/converterMiddleware';
 import rootReducer from 'src/reducers';
 
 const enhancers = composeWithDevTools(
-  // applyMiddleware(
-  //   converterMiddleware,
-  //   // ... d'autres middlewares
-  // ),
+  applyMiddleware(
+    converterMiddleware,
+    // ... d'autres middlewares
+  ),
 );
 
 const store = createStore(

@@ -1,8 +1,8 @@
-import { CHANGE_CURRENCY, SET_AMOUNT } from "../actions/converter";
+import { CHANGE_CONVERTED_AMOUNT, CHANGE_CURRENCY, SET_AMOUNT } from "../actions/converter";
 
 const initialState = {
   // ici l'état initial
-  baseAmount: '',
+  baseAmount: 0,
   convertedAmount: '',
   convertedCurrency: '',
 };
@@ -14,11 +14,15 @@ function converterReducer(state = initialState, action = {}) {
         ...state,
         baseAmount: action.value,
       };
-    
     case CHANGE_CURRENCY:
       return {
         ...state,
         convertedCurrency: action.value,
+      };
+    case CHANGE_CONVERTED_AMOUNT:
+      return {
+        ...state,
+        convertedAmount: action.value,
       };
     default:
       return state;

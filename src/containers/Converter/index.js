@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { setAmount, changeCurrency } from 'src/actions/converter';
 // on importe le composant de présentation
 import Converter from 'src/components/Converter';
+import { convertAmount } from '../../actions/converter';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
@@ -22,6 +23,7 @@ const mapDispatchToProps = (dispatch) => ({
 
   changeCurrency: (newCurrency) => {
     dispatch(changeCurrency(newCurrency));
+    dispatch(convertAmount(newCurrency));
   },
 });
 
